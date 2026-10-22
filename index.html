@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f7ff">
+  <meta name="description" content="ACG游戏社正式停止运营。为了提供更加稳定、完善的资源分享与阅读体验，后续更新与服务已转移至鸢空ACG。查看新站官方访问地址。">
+  <title>ACG游戏社停站公告｜前往鸢空ACG</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #20243a;
+      --muted: #667088;
+      --primary: #5364e8;
+      --primary-deep: #4053da;
+      --line: #e8ebf5;
+      --surface: #ffffff;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse 520px 460px at 9% 4%, rgba(136, 193, 255, .22), transparent 72%),
+        radial-gradient(ellipse 580px 430px at 96% 13%, rgba(188, 159, 251, .25), transparent 70%),
+        linear-gradient(180deg, #f6f8ff 0%, #f9faff 48%, #f6f8fd 100%);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { width: min(100% - 36px, 870px); margin-inline: auto; }
+    .topbar { padding-top: 35px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-size: 15px; font-weight: 800; letter-spacing: .2px; }
+    .brand-logo {
+      display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px;
+      background: linear-gradient(135deg, #7187ff, #9879ef); color: #fff;
+      font-size: 14px; box-shadow: 0 7px 17px #6173df2b;
+    }
+    .top-label { color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: .1em; }
+    main { padding: 65px 0 48px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px;
+      border: 1px solid #dedffb; border-radius: 999px; background: #fff9;
+      color: #6566b4; font-size: 12px; font-weight: 800; letter-spacing: .06em;
+    }
+    .status-dot { width: 7px; height: 7px; background: #8c79df; border-radius: 50%; }
+    h1 { margin: 22px 0 18px; font-size: clamp(34px, 6vw, 53px); line-height: 1.25; letter-spacing: -.035em; font-weight: 850; }
+    h1 span { color: #5869dc; }
+    .lead { max-width: 740px; color: #566179; font-size: 16px; line-height: 2.05; margin: 0 0 30px; }
+    .content-card {
+      position: relative; overflow: hidden; border: 1px solid #e9ebf5; border-radius: 24px;
+      background: rgba(255,255,255,.92); box-shadow: 0 20px 65px #485a9620, 0 4px 15px #6571a00a;
+      padding: 34px 38px;
+    }
+    .content-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: linear-gradient(#77a7f8, #a58bf0); }
+    .content-card h2 { font-size: 18px; margin: 0 0 13px; letter-spacing: .01em; }
+    .content-card p { color: #5c667b; line-height: 2; font-size: 15px; margin: 0 0 13px; }
+    .content-card p:last-child { margin-bottom: 0; }
+    .content-card strong { color: #3746b5; font-weight: 800; }
+    .site-section { margin-top: 42px; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+    .section-title { margin: 0; font-size: 22px; font-weight: 800; letter-spacing: -.02em; }
+    .section-hint { color: #8189a0; font-size: 12px; margin: 0; }
+    .primary-card {
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+      background: linear-gradient(110deg, #5769e7, #7368db 58%, #9478e7);
+      border-radius: 22px; padding: 27px 29px; color: #fff;
+      box-shadow: 0 14px 32px #5c66d63b;
+    }
+    .primary-card .site-kicker { font-size: 12px; font-weight: 700; opacity: .82; letter-spacing: .06em; }
+    .primary-card h3 { font-size: clamp(22px, 4.5vw, 30px); margin: 10px 0 7px; letter-spacing: -.025em; overflow-wrap: anywhere; }
+    .primary-card .description { margin: 0; opacity: .83; font-size: 13px; }
+    .open-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      flex: 0 0 auto; min-height: 48px; text-decoration: none; padding: 0 19px;
+      border-radius: 13px; background: #fff; color: #4b58c9; font-size: 14px; font-weight: 800;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .open-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px #252c8040; }
+    .open-btn svg, .backup-link svg { width: 17px; height: 17px; flex: 0 0 auto; }
+    .backups-title { margin: 28px 0 13px; font-size: 14px; font-weight: 800; color: #4d556e; }
+    .backup-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .backup-link {
+      min-width: 0; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      padding: 17px 19px; border: 1px solid #e4e8f3; background: #ffffffdb; border-radius: 14px;
+      text-decoration: none; color: #434a61; font-size: 15px; font-weight: 650; transition: border-color .2s, background .2s, transform .2s;
+    }
+    .backup-link span { overflow-wrap: anywhere; }
+    .backup-link svg { color: #9a9fbd; }
+    .backup-link:hover { border-color: #9faafa; background: #fff; transform: translateY(-2px); }
+    .note { margin: 18px 0 0; font-size: 13px; color: #777f96; line-height: 1.9; }
+    .community-section { margin-top: 32px; }
+    .community-card {
+      display: flex; align-items: center; justify-content: space-between; gap: 22px;
+      padding: 24px 28px; border: 1px solid #dee5fb; border-radius: 20px;
+      background: linear-gradient(110deg, #f0f4ff, #f8f6ff 85%);
+    }
+    .community-main { display: flex; align-items: flex-start; gap: 15px; min-width: 0; }
+    .community-icon {
+      flex: 0 0 auto; display: grid; place-items: center; width: 44px; height: 44px;
+      border-radius: 14px; background: #e0e7ff; color: #5364df;
+    }
+    .community-icon svg { width: 23px; height: 23px; }
+    .community-copy { min-width: 0; }
+    .community-copy h2 { margin: 1px 0 7px; font-size: 18px; letter-spacing: -.01em; }
+    .community-copy p { margin: 0 0 9px; font-size: 13px; color: #69738b; line-height: 1.8; }
+    .group-number { color: #3c4bbc; font-size: 18px; font-weight: 800; letter-spacing: .07em; font-variant-numeric: tabular-nums; }
+    .group-btn {
+      flex: 0 0 auto; display: inline-flex; justify-content: center; align-items: center;
+      min-height: 44px; padding: 0 17px; border: 1px solid #cbd4fc;
+      border-radius: 12px; background: #fff; color: #485bd4;
+      font: inherit; font-size: 13px; font-weight: 800; cursor: pointer;
+      transition: border-color .2s ease, transform .2s ease, background .2s ease;
+    }
+    .group-btn:hover { background: #f7f8ff; border-color: #aebbf7; transform: translateY(-1px); }
+    .group-hint { margin: 9px 2px 0; font-size: 12px; line-height: 1.7; color: #848da5; }
+    .farewell { text-align: center; margin: 50px 0 10px; color: #7c85a0; font-size: 14px; line-height: 1.9; }
+    .farewell strong { display: block; color: #454d73; font-size: 16px; font-weight: 800; margin-bottom: 7px; }
+    footer { border-top: 1px solid #e6eaf4; padding: 21px 0 32px; color: #939bb1; font-size: 12px; }
+    .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 18px; }
+    a:focus-visible { outline: 3px solid #9ea9fb; outline-offset: 4px; }
+    @media (max-width: 600px) {
+      .wrap { width: min(100% - 30px, 870px); }
+      .topbar { padding-top: 22px; }
+      .top-label { font-size: 11px; }
+      main { padding-top: 47px; }
+      .lead { font-size: 14px; line-height: 1.95; }
+      .content-card { border-radius: 19px; padding: 25px 22px; }
+      .content-card p { font-size: 14px; }
+      .site-section { margin-top: 34px; }
+      .section-head { align-items: start; flex-direction: column; gap: 7px; }
+      .primary-card { align-items: stretch; flex-direction: column; padding: 23px 22px; gap: 20px; border-radius: 18px; }
+      .open-btn { width: 100%; }
+      .backup-grid { grid-template-columns: 1fr; gap: 10px; }
+      .backup-link { padding: 15px 17px; }
+      .community-section { margin-top: 27px; }
+      .community-card { padding: 21px 19px; flex-direction: column; align-items: stretch; gap: 17px; }
+      .community-main { gap: 12px; }
+      .community-icon { width: 40px; height: 40px; border-radius: 12px; }
+      .community-copy h2 { font-size: 16px; }
+      .group-btn { width: 100%; }
+      .farewell { margin-top: 36px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .open-btn, .backup-link { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand"><span class="brand-logo" aria-hidden="true">ACG</span><span>ACG游戏社</span></div>
+      <span class="top-label">站点迁移通知</span>
+    </header>
+
+    <main>
+      <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> 官方公告 · 2026.10.13</div>
+      <h1>ACG游戏社<span>正式停站</span><br>新的旅程，鸢空再见。</h1>
+      <p class="lead">感谢每一位曾经访问、支持和陪伴 ACG游戏社 的朋友。旧站即日起停止运营，后续资源更新与网站服务将统一转移至 <strong>鸢空ACG</strong>。</p>
+
+      <section class="content-card" aria-labelledby="notice-title">
+        <h2 id="notice-title">关于本次停站与迁移</h2>
+        <p>随着网站不断发展，原有站点在功能、架构和使用体验等方面逐渐显现出不足。为了提供<strong>更加稳定、完善的服务</strong>，我们决定停止 ACG游戏社的运营，将后续精力集中投入到新站「鸢空ACG」的建设与维护中。</p>
+        <p>这并非简单地更换网站名称，而是一次新的升级与开始。未来，我们将持续优化资源分类、下载体验、漫画阅读等功能，努力为大家带来更便捷、更舒适的使用体验。</p>
+        <p>感谢大家一路以来的理解与支持，也欢迎前往鸢空ACG继续相伴。</p>
+      </section>
+
+      <section class="site-section" aria-labelledby="links-title">
+        <div class="section-head">
+          <h2 class="section-title" id="links-title">鸢空ACG · 官方访问入口</h2>
+          <p class="section-hint">建议收藏主站及备用地址</p>
+        </div>
+        <div class="primary-card">
+          <div>
+            <div class="site-kicker">MAIN WEBSITE · 主站入口</div>
+            <h3>www.ykacg.com</h3>
+            <p class="description">资源分享与后续更新统一在此继续</p>
+          </div>
+          <a class="open-btn" href="https://www.ykacg.com/" target="_blank" rel="noopener noreferrer" aria-label="访问鸢空ACG主站（新窗口打开）">
+            立即前往
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <h3 class="backups-title">备用访问地址</h3>
+        <div class="backup-grid">
+          <a class="backup-link" href="https://www.ykacg.cc/" target="_blank" rel="noopener noreferrer"><span>www.ykacg.cc</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="backup-link" href="https://www.ykacg.net/" target="_blank" rel="noopener noreferrer"><span>www.ykacg.net</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="backup-link" href="https://www.ykacg.top/" target="_blank" rel="noopener noreferrer"><span>www.ykacg.top</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a class="backup-link" href="https://www.ykacg.vip/" target="_blank" rel="noopener noreferrer"><span>www.ykacg.vip</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+        <p class="note">温馨提示：如遇某个入口无法访问，可尝试上方其他地址。请认准以上公布的官方域名。</p>
+      </section>
+
+      <section class="community-section" aria-labelledby="group-title">
+        <div class="community-card">
+          <div class="community-main">
+            <span class="community-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5 8.1 8.1 0 0 1-3.2-.7L4 20l1.6-4.1a7.5 7.5 0 1 1 14.4-4.4Z"/><path d="M9 11.5h.01M12.5 11.5h.01M16 11.5h.01"/></svg>
+            </span>
+            <div class="community-copy">
+              <h2 id="group-title">加入QQ群 · 保持联系</h2>
+              <p>欢迎加入交流群，获取新站动态、地址更新及相关通知。</p>
+              <div class="group-number" id="qq-group-number">794891205</div>
+            </div>
+          </div>
+          <button class="group-btn" id="copy-qq-group" type="button" aria-label="复制QQ群号794891205">复制QQ群号</button>
+        </div>
+        <p class="group-hint" id="group-copy-status" role="status" aria-live="polite">打开QQ，搜索群号 794891205 即可申请加入。</p>
+      </section>
+
+      <div class="farewell">
+        <strong>旧站落幕，初心不改。</strong>
+        感谢相遇。让每一份热爱，都在鸢空自由翱翔。
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-inner"><span>© 2026 ACG游戏社 · 停站公告</span><span>后续服务：鸢空ACG</span></div>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      var button = document.getElementById('copy-qq-group');
+      var status = document.getElementById('group-copy-status');
+      var number = '794891205';
+      button.addEventListener('click', async function () {
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(number);
+          } else {
+            var input = document.createElement('textarea');
+            input.value = number;
+            input.style.position = 'fixed';
+            input.style.opacity = '0';
+            document.body.appendChild(input);
+            input.select();
+            var copied = document.execCommand('copy');
+            document.body.removeChild(input);
+            if (!copied) throw new Error('copy failed');
+          }
+          button.textContent = '已复制群号';
+          status.textContent = '群号已复制，打开QQ搜索群号即可申请加入。';
+        } catch (e) {
+          status.textContent = '复制未成功，请手动复制群号 794891205，并在QQ中搜索加入。';
+        }
+      });
+    }());
+  </script>
+</body>
+</html>
